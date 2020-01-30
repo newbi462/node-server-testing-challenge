@@ -37,3 +37,5 @@ server.use('/api', projectRouter);
 //LISTEN SERVER
 const port = 8000;
 server.listen(port, () => console.log((`\n ** api on: ${port} ** \n`)));
+
+module.exports = server;// must export for tests, this feels like an issue

@@ -36,4 +36,20 @@ describe('server', function() {
       expect(res.status).toBe(200);
     })
 
+    it('POST /create2', function() {
+      return request(server)
+        .post('/api/create')
+        .send({
+        	vin: "testvin",
+        	make: "testmake",
+        	model: "testmodel",
+        	mileage: 123
+        })
+        //.set('Accept', 'application/json')
+          .then(res => {
+          // check that the status code is 200
+          expect(res.status).toBe(200);
+      })
+    })//WAS NOT MY TEST WAS THE TESTER that was broken
+
 })
